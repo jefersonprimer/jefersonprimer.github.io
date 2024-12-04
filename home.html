@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Portfólio de Jeferson Primer, desenvolvedor Web e Mobile."
+    />
+    <meta name="keywords" content="Portfólio, Desenvolvedor, Web, Mobile" />
+
+    <!-- Bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="icon" href="image/favicon.png" />
+    <title>Jeferson Primer</title>
+  </head>
+  <body>
+    <header>
+      <div class="toggle-container position-fixed top-0 end-0 p-3">
+        <input
+          class="toggle-input"
+          id="lang-toggle"
+          type="checkbox"
+          aria-label="Toggle Button"
+        />
+        <label class="toggle-label" for="lang-toggle"></label>
+        <div class="legend">
+          <span>BR</span>
+          <span>US</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container cover">
+        <section
+          class="cover text-center d-flex flex-column align-items-center justify-content-center vh-100"
+        >
+          <img src="image/logo-ofc.png" alt="logo" class="logo img-fluid" />
+          <div id="text-container" class="mt-3">
+            <span id="profissao"></span><span id="cursor">|</span>
+          </div>
+          <div
+            class="social-icons d-flex justify-content-center gap-3 mt-4 fs-3 fs-md-4 fs-lg-5"
+          >
+            <a
+              href="https://www.linkedin.com/in/jeferson-primer/"
+              id="linkedin"
+              target="_blank"
+              ><i class="bi bi-linkedin bg-custom-color-icons"></i
+            ></a>
+            <a
+              href="mailto:contato.primerdev@gmail.com"
+              id="email"
+              target="_blank"
+              ><i class="bi bi-envelope bg-custom-color-icons"></i
+            ></a>
+            <a
+              href="https://github.com/jefersonprimer"
+              id="github"
+              target="_blank"
+              ><i class="bi bi-github bg-custom-color-icons"></i
+            ></a>
+            <a
+              href="https://twitter.com/Jeferson_Primer"
+              id="twitter"
+              target="_blank"
+              ><i class="bi bi-twitter-x bg-custom-color-icons"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/jefersonprimer/"
+              id="instagram"
+              target="_blank"
+              ><i class="bi bi-instagram bg-custom-color-icons"></i
+            ></a>
+          </div>
+
+          <div class="scroll-down-indicator">
+            <i class="bi bi-chevron-down"></i>
+          </div>
+        </section>
+      </div>
+
+      <div class="container">
+        <section
+          class="about d-flex flex-column flex-md-row align-items-center justify-content-center vh-100"
+        >
+          <img src="image/about-me.png" alt="about" class="about-img" />
+          <div class="about-me-text text-center text-md-start">
+            <h2 id="about-title">Olá! Eu sou o Jeferson</h2>
+            <p id="about-text">
+              Apaixonado pelo desenvolvimento web desde os 18 anos, brasileiro e
+              nascido em 2003. Sou estudante de engenharia de software na
+              Estácio e Engenheiro de Software freelance. Sou uma pessoa que
+              adora desafios, assim como todo desenvolvedor, mas em especial
+              aqueles que me tiram da minha zona de conforto, pois as minhas
+              maiores evoluções e aprendizados vieram de momentos em que me vi
+              obrigado a sair dela e enfrentar a vida. Estudante assíduo, que
+              aprecia tomar café e nas horas vagas compartilha conhecimento nas
+              redes sociais. Assisto animes e séries investigativas e também
+              adoro ir à academia.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="container bloco-experience">
+        <section class="experience">
+          <div class="experience-info">
+            <h1 id="experience-title">Minha Experiência</h1>
+            <h2 id="cargo">Software Engineer</h2>
+            <p id="data">Julho 2022 - Presente</p>
+
+            <div class="experience-text-div">
+              <p id="experience-text">
+                Engenheiro de Software Freelancer Julho 2023 - Hoje As a
+                Software Engineer, I am responsible for developing new features,
+                carrying out code reviews, writing unit tests, resolving tickets
+                and bugs, in addition to monitoring and deploying applications.
+                I use technologies such as TypeScript, JavaScript, Angular,
+                Micro Frontends, Micro Services, Git, AWS and Google Analytics.
+                As a Full-Stack freelancer, I work with Java, Spring Boot and
+                Spring Cloud to create and manage microservices, and use Angular
+                and TypeScript to build dynamic interfaces. My experience with
+                AWS includes services such as ECS, EC2, RDS, S3, Lambda, SQS and
+                SNS, allowing me to develop scalable and resilient solutions. I
+                also have knowledge in SQL Server and MySQL databases,
+                optimizing schemas and queries. Currently, I am in the second
+                semester of Software Engineering, deepening theoretical and
+                academic knowledge to complement my practice. This training is
+                enhancing my ability to face complex challenges and provide
+                innovative and efficient solutions.
+
+                <strong>Tecnologias</strong>: Typescript, Javascript, Angular,
+                Micro Frontends, Micro Serviços, Angular, Git, AWS Services,
+                Google Analytics.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container projects justify-content-center">
+        <section>
+          <h2 id="projects-title">Projetos</h2>
+          <div class="project-links">
+            <a
+              href="https://github.com/jefersonprimo/micro-frontends-example"
+              class="project-link"
+            >
+              <div class="title-project-svg">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  color="#373738"
+                  height="1.5rem"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="color: rgb(55, 55, 56)"
+                >
+                  <path
+                    d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"
+                  ></path>
+                  <path
+                    d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"
+                  ></path>
+                </svg>
+                <strong class="title-svg">hackathon-2024</strong>
+              </div>
+              <p>
+                Repositório oficial do Hackathon KipperDev 2024, contendo as
+                regras, desafios e link para...
+              </p>
+              <div class="language-container">
+                <p id="language">Java</p>
+                <p id="language">Java</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/micro-services-example"
+              class="project-link"
+            >
+              <div class="title-project-svg">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  color="#373738"
+                  height="1.5rem"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="color: rgb(55, 55, 56)"
+                >
+                  <path
+                    d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"
+                  ></path>
+                  <path
+                    d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"
+                  ></path>
+                </svg>
+                <strong class="title-svg">auth-api</strong>
+              </div>
+              <p>
+                This repository contains a simple Java Spring project that
+                implements authentication and...
+              </p>
+              <div class="language-container">
+                <p id="language">Java</p>
+                <p id="language">Java</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/angular-example"
+              class="project-link"
+            >
+              <div class="title-project-svg">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  color="#373738"
+                  height="1.5rem"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="color: rgb(55, 55, 56)"
+                >
+                  <path
+                    d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"
+                  ></path>
+                  <path
+                    d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"
+                  ></path>
+                </svg>
+                <strong class="title-svg">email-service-backend</strong>
+              </div>
+              <p>
+                This repository contains an Rest API that works as email sender
+                working with queues...
+              </p>
+              <div class="language-container">
+                <p id="language">Java</p>
+                <p id="language">Java</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/micro-frontends-example"
+              class="project-link"
+            >
+              <div class="title-project-svg">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  color="#373738"
+                  height="1.5rem"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="color: rgb(55, 55, 56)"
+                >
+                  <path
+                    d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"
+                  ></path>
+                  <path
+                    d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"
+                  ></path>
+                </svg>
+                <strong class="title-svg">desafio-backend-uber</strong>
+              </div>
+              <p>
+                Solução do desafio de backend da Uber desenvolvido durante o
+                vídeo
+              </p>
+              <div class="language-container">
+                <p id="language">Java</p>
+                <p id="language">Java</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/micro-services-example"
+              class="project-link"
+            >
+              <div class="title-project-svg">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  color="#373738"
+                  height="1.5rem"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="color: rgb(55, 55, 56)"
+                >
+                  <path
+                    d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"
+                  ></path>
+                  <path
+                    d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"
+                  ></path>
+                </svg>
+                <strong class="title-svg">eventostec-backend</strong>
+              </div>
+              <div class="language-container">
+                <p id="language">Java</p>
+                <p id="language">PHP</p>
+                <p id="language">GO</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/angular-example"
+              class="project-link"
+            >
+              <div class="title-project-svg">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  color="#373738"
+                  height="1.5rem"
+                  width="1.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="color: rgb(55, 55, 56)"
+                >
+                  <path
+                    d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"
+                  ></path>
+                  <path
+                    d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"
+                  ></path>
+                </svg>
+                <strong class="title-svg">apple-page-clone</strong>
+              </div>
+              <p>Apple homepage clone using just HTML+CSS</p>
+              <div class="language-container">
+                <p id="language">Java</p>
+                <p id="language">JavaScript</p>
+                <p id="language">TypeScript</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="container leitura-rapida">
+        <section>
+          <h2 id="leitura-rapida-title">Leitura rápida</h2>
+          <div class="leitura-links">
+            <a
+              href="https://github.com/jefersonprimer/mini-curso_js"
+              target="_blank"
+              class="read-link"
+              title="Acesse o mini curso de fundamentos de JavaScript"
+            >
+              <img
+                src="image/curso-js.png"
+                alt="Imagem do mini curso de JavaScript"
+              />
+              <div class="text-leitura">
+                <h3>Mini curso JS</h3>
+                <p>Fundamentos do JS</p>
+                <p>
+                  Esse mini curso cobre a base do JS, desde as variáveis até o
+                  DOM
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/jefersonprimo/commits-patterns"
+              class="read-link"
+            >
+              <img src="image/commits-patterns.jpg" alt="" />
+              <div class="text-leitura">
+                <h3>Padrões de Commits</h3>
+                <p>Alguns Padrões de commits <br> e alguns exemplos de como usar</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/angular-example"
+              class="read-link"
+            >
+              <img src="image/download.jpg" alt="" />
+              <div class="text-leitura">
+                <h3>A Beginner's Guide to JavaScript's Single Thread a...</h3>
+                <p>Publication date: 0-13-2024</p>
+                <p>Reactions: 24</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/micro-frontends-example"
+              class="read-link"
+            >
+              <img src="image/download.jpg" alt="" />
+              <div class="text-leitura">
+                <h3>A Beginner's Guide to Github Actions</h3>
+                <p>Publication date: 0-13-2024</p>
+                <p>Reactions: 24</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/micro-services-example"
+              class="read-link"
+            >
+              <img src="image/download.jpg" alt="" />
+              <div class="text-leitura">
+                <h3>Iniciando estudos de RxJs em Angular</h3>
+                <p>Publication date: 0-13-2024</p>
+                <p>Reactions: 24</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/jefersonprimo/angular-example"
+              class="read-link"
+            >
+              <img src="image/download.jpg" alt="" />
+              <div class="text-leitura">
+                <h3>Programação Orientada Objetos e Programação Proced...</h3>
+                <p>Publication date: 0-13-2024</p>
+                <p>Reactions: 24</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="scroll-up-indicator" id="scrollUpButton">
+        <i class="bi bi-arrow-up-circle"></i>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="js/language.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+  </body>
+</html>
