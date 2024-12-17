@@ -3,7 +3,7 @@
 const texts = {
     pt: {
       "page-title": "Jeferson Primer",
-      "about-title": "Olá! Eu sou o  Jeferson",
+      "about-title": "Olá! Eu sou o  Jeferson Primer",
       "about-text": `Apaixonado pelo desenvolvimento web desde os 18 anos, brasileiro e nascido em 2003. Sou estudante de engenharia de software na estacio e Engenheiro de Software freelance. Sou uma pessoa que adora desafios, assim como todo desenvolvedor, mas em especial aqueles que me tiram da minha zona de conforto, pois as minhas maiores evoluções e aprendizados vieram de momentos em que me vi obrigado a sair dela e enfrentar a vida. Estudante assíduo, que aprecia tomar café e nas horas vagas compartilha conhecimento nas redes sociais. Assisto animes e séries investigativas e também adoro ir na academia `,
       "experience-title": "Minha Experiência",
       "cargo": "Engenheiro de Software",
@@ -16,11 +16,11 @@ const texts = {
   
       Atualmente, estou no segundo semestre de Engenharia de Software, aprofundando conhecimentos teóricos e acadêmicos para complementar minha prática. Essa formação está aprimorando minha capacidade de enfrentar desafios complexos e fornecer soluções inovadoras e eficientes.`,
       "projects-title": "Projetos",
-      "leitura-rapida-title": "Leitura rápida"
+      "leitura-rapida-title": "Blog - Leitura rápida"
     },
     en: {
       "page-title": "Jeferson Primer",
-      "about-title": "Hi There! I'm Jeferson",
+      "about-title": "Hi There! I'm Jeferson Primer",
       "about-text": `Passionate about web development since I was 18 years old, Brazilian and born in 2001. I'm a Computer Science student at the Federal University of Pelotas and a Software Engineer at the largest bank in Latin America. I'm someone who loves challenges, just like any developer, but especially those that push me out of my comfort zone, as my greatest evolutions and learnings have come from times when I had to leave it and face life. An avid student who enjoys drinking coffee and, in my spare time, shares knowledge on social media. I watch romances and investigative series and also love going to the gym `,
       "experience-title": "My Experience",
       "cargo": "Junior Software Engineer",
@@ -34,7 +34,7 @@ const texts = {
       Currently, I am in the second semester of Software Engineering, deepening theoretical and academic knowledge to complement my practice. This training is enhancing my ability to face complex challenges and provide innovative and efficient solutions.
       Technologies: Typescript, Javascript, Angular, Micro Frontends, Microservices, Angular, Git, AWS Services, Google Analytics.`,
       "projects-title": "Projects",
-      "leitura-rapida-title": "Quick Reads"
+      "leitura-rapida-title": "Blog - Quick Reads"
     }
   };
   
