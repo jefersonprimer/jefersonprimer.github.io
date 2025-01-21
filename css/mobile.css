@@ -649,7 +649,7 @@
   #about-text {
     padding: 5px;
     color: var(--about-text-color);
-/*     text-align: justify; */
+    text-align: center;
   }
 
   .about-img {
@@ -668,7 +668,7 @@
     background-color: var(--primary-color02);
     max-width: 100%;
     text-align: center;
-    text-align: justify;
+    text-align: center;
     word-spacing: 3px;
     padding: 0;
   }
