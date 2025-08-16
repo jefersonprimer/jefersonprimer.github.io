@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Blog - Your Name</title>
+    <meta name="description" content="Welcome to my personal blog where I share my thoughts on web development, programming, and technology.">
+    <meta name="keywords" content="blog, web development, programming, technology, tutorials">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Welcome to My Blog - Your Name">
+    <meta property="og:description" content="Welcome to my personal blog where I share my thoughts on web development, programming, and technology.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yourusername.github.io/blog/welcome-to-my-blog">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../">YourName</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../#home" class="nav-link">Home</a>
+                <a href="../#about" class="nav-link">About</a>
+                <a href="../#skills" class="nav-link">Skills</a>
+                <a href="../#projects" class="nav-link">Projects</a>
+                <a href="../#contact" class="nav-link">Contact</a>
+                <a href="./" class="nav-link">Blog</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-page">
+        <div class="container">
+            <article class="post-content">
+                <header class="post-header">
+                    <nav class="post-breadcrumb">
+                        <a href="./">Blog</a> <span>/</span> <span>Welcome to My Blog</span>
+                    </nav>
+                    <div class="post-meta">
+                        <span class="post-category">General</span>
+                        <span class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            August 16, 2025
+                        </span>
+                        <span class="post-reading-time">
+                            <i class="fas fa-clock"></i>
+                            3 min read
+                        </span>
+                    </div>
+                    <h1 class="post-title">Welcome to My Blog</h1>
+                    <div class="post-tags">
+                        <span class="post-tag">welcome</span>
+                        <span class="post-tag">introduction</span>
+                        <span class="post-tag">blog</span>
+                    </div>
+                </header>
+                
+                <div class="post-body" id="post-content">
+                    <!-- Content will be loaded here by JavaScript -->
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading post content...</p>
+                    </div>
+                </div>
+                
+                <footer class="post-footer">
+                    <div class="post-nav">
+                        <a href="./" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Blog
+                        </a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Your Name. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="../">Back to Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/markdown-parser.js"></script>
+    <script>
+        // Load and render the blog post content
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPostContent('welcome-to-my-blog');
+        });
+        
+        async function loadPostContent(slug) {
+            try {
+                const response = await fetch(`posts/${slug}/README.md`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const markdown = await response.text();
+                const postContent = document.getElementById('post-content');
+                
+                // Parse the markdown content (remove frontmatter)
+                const content = markdown.replace(/^---\n[\s\S]*?\n---\n/, '');
+                const htmlContent = parseMarkdown(content);
+                
+                postContent.innerHTML = htmlContent;
+            } catch (error) {
+                console.error('Error loading post:', error);
+                document.getElementById('post-content').innerHTML = `
+                    <div class="error-state">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Error Loading Post</h3>
+                        <p>Sorry, we couldn't load this blog post. Please try again later.</p>
+                        <a href="./" class="btn btn-primary">Back to Blog</a>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

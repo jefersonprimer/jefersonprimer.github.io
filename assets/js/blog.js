@@ -273,11 +273,11 @@ function createPostCard(post) {
                 </span>
             </div>
             <h2 class="post-title">
-                <a href="#" onclick="openPost('${post.slug}'); return false;">${post.title}</a>
+                <a href="${post.slug}.html">${post.title}</a>
             </h2>
             <p class="post-excerpt">${post.excerpt}</p>
             <div class="post-tags">${tagsHTML}</div>
-            <a href="#" onclick="openPost('${post.slug}'); return false;" class="read-more">
+            <a href="${post.slug}.html" class="read-more">
                 Read More <i class="fas fa-arrow-right"></i>
             </a>
         </article>
@@ -302,7 +302,7 @@ function renderRecentPosts() {
     const recentPosts = blogPosts.slice(0, 5);
     const recentPostsHTML = recentPosts.map(post => `
         <div class="recent-post">
-            <a href="#" onclick="openPost('${post.slug}'); return false;">
+            <a href="${post.slug}.html">
                 ${post.title}
             </a>
             <small>${formatDate(post.date)}</small>
@@ -336,147 +336,7 @@ function renderCategories() {
     categoriesContainer.innerHTML = categoriesHTML;
 }
 
-/**
- * Open individual blog post
- * @param {string} slug - Post slug
- */
-function openPost(slug) {
-    const post = blogPosts.find(p => p.slug === slug);
-    if (!post) {
-        showError('Post not found.');
-        return;
-    }
-    
-    // Create post modal or navigate to post page
-    showPostModal(post);
-}
-
-/**
- * Show post in a modal
- * @param {Object} post - Post data
- */
-function showPostModal(post) {
-    // Create modal overlay
-    const modal = document.createElement('div');
-    modal.className = 'post-modal';
-    modal.innerHTML = `
-        <div class="post-modal-content">
-            <div class="post-modal-header">
-                <button class="post-modal-close" onclick="closePostModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="post-modal-body">
-                <article class="post-content">
-                    <header class="post-header">
-                        <div class="post-meta">
-                            <span class="post-category">${post.category}</span>
-                            <span class="post-date">${formatDate(post.date)}</span>
-                            <span class="post-reading-time">${post.readingTime} min read</span>
-                        </div>
-                        <h1 class="post-title">${post.title}</h1>
-                        <div class="post-tags">
-                            ${post.tags.map(tag => `<span class="post-tag">${tag}</span>`).join('')}
-                        </div>
-                    </header>
-                    <div class="post-body">
-                        ${post.content}
-                    </div>
-                </article>
-            </div>
-        </div>
-    `;
-    
-    // Add modal styles
-    modal.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        padding: 20px;
-        overflow-y: auto;
-    `;
-    
-    const modalContent = modal.querySelector('.post-modal-content');
-    modalContent.style.cssText = `
-        background: white;
-        border-radius: 12px;
-        max-width: 800px;
-        width: 100%;
-        max-height: 90vh;
-        overflow-y: auto;
-        position: relative;
-    `;
-    
-    const modalHeader = modal.querySelector('.post-modal-header');
-    modalHeader.style.cssText = `
-        position: sticky;
-        top: 0;
-        background: white;
-        padding: 1rem;
-        border-bottom: 1px solid #e2e8f0;
-        display: flex;
-        justify-content: flex-end;
-        z-index: 1;
-    `;
-    
-    const closeButton = modal.querySelector('.post-modal-close');
-    closeButton.style.cssText = `
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #6b7280;
-        padding: 0.5rem;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    `;
-    
-    const modalBody = modal.querySelector('.post-modal-body');
-    modalBody.style.cssText = `
-        padding: 0 2rem 2rem;
-    `;
-    
-    // Add to document
-    document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
-    
-    // Close modal on overlay click
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closePostModal();
-        }
-    });
-    
-    // Close modal on escape key
-    document.addEventListener('keydown', function escapeHandler(e) {
-        if (e.key === 'Escape') {
-            closePostModal();
-            document.removeEventListener('keydown', escapeHandler);
-        }
-    });
-}
-
-/**
- * Close post modal
- */
-function closePostModal() {
-    const modal = document.querySelector('.post-modal');
-    if (modal) {
-        modal.remove();
-        document.body.style.overflow = '';
-    }
-}
+// Modal functionality removed - posts now have individual pages
 
 /**
  * Filter posts by category
@@ -558,8 +418,6 @@ function showError(message) {
 }
 
 // Make functions available globally for onclick handlers
-window.openPost = openPost;
-window.closePostModal = closePostModal;
 window.filterByCategory = filterByCategory;
 
 // Add styles for modal and other blog components
